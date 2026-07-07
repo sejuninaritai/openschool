@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes ">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-2">
+        <li class="text">2体階段下</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-">
+        <li class="text">１体階段→体研</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-">
+        <li class="text">１体下２体側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-">
+        <li class="text">１体下看護側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-">
+        <li class="text">１体左入り口外側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-12t">
+        <li class="text">1体と2体の狭間t時路</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-">
+        <li class="text">１体右交差点</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-">
+        <li class="text">１体ロープウェイ踊り場</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-">
+        <li class="text">１体左交差点</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-">
+        <li class="text">２階看護塔と本館の渡り廊下（本館側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-">
+        <li class="text">１体下中</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-2">
+        <li class="text">2体中央</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-2">
+        <li class="text">2体正面</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-2">
+        <li class="text">2体右階段↑</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-">
+        <li class="text">２体右階段踊り場</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-">
+        <li class="text">３階看護塔渡り廊下本館側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-3">
+        <li class="text">3号館１階食堂側階段前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-3">
+        <li class="text">3号館３階選択５前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-33">
+        <li class="text">3号館から理家塔に繋ぐ廊下（3号館側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-3">
+        <li class="text">3号館生物教室</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-">
+        <li class="text">４階トイレ前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-">
+        <li class="text">４↔︎３階段踊り場</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-">
+        <li class="text">３階エレベーター前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-">
+        <li class="text">３階階段入った所</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-">
+        <li class="text">３↔︎２階段踊り場</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-">
+        <li class="text">２階エレベーター前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-">
+        <li class="text">２階生徒指導室前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="27-">
+        <li class="text">２↔︎１階段踊り場</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="28-">
+        <li class="text">１階事務室前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="29-">
+        <li class="text">１階階段前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="30-">
+        <li class="text">１階進路指導室前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="31-">
+        <li class="text">１階保健室前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="32-">
+        <li class="text">１階靴箱前(保健室側)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="33-">
+        <li class="text">１階靴箱（中央）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="34-">
+        <li class="text">１階靴箱（階段前）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="35-">
+        <li class="text">１階靴箱玄関</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="36-">
+        <li class="text">２↔︎１階段踊り場(渡り廊下側)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="37-">
+        <li class="text">２階階段前(渡り廊下側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="38-">
+        <li class="text">３↔︎２階段踊り場(渡り廊下側)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="39-">
+        <li class="text">３階会談前(渡り廊下側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="40-">
+        <li class="text">４↔︎３階段踊り場(渡り廊下側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="41-">
+        <li class="text">４階階段前(渡り廊下側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="42--">
+        <li class="text">４階１-４前(右１)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="43--">
+        <li class="text">４階２-３前(右２）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="44--">
+        <li class="text">４階１-２前(右３)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="45-">
+        <li class="text">４階情報教室前(右４）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="46--">
+        <li class="text">４階１-６前(右５）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="47--">
+        <li class="text">３階２-５前(右１）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="48--">
+        <li class="text">３階３-７前(右３）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="49-">
+        <li class="text">３階情報教室右扉(右４)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="50-">
+        <li class="text">３階情報教室左扉(右５）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="51-">
+        <li class="text">２階職員室中扉(右２）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="52-">
+        <li class="text">２階職員室後扉(右３）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="53-">
+        <li class="text">２階進路指導室前(右４）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="54-">
+        <li class="text">２階渡り廊下入り口</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="55-">
+        <li class="text">２階渡り廊下中</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="56--">
+        <li class="text">２階２-６前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="57-">
+        <li class="text">３↔︎２階段前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="58-">
+        <li class="text">２階社会科教室前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="59-">
+        <li class="text">２階書道教室前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="60-">
+        <li class="text">２階視聴覚室③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="61-">
+        <li class="text">３階英語研究室前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="62-">
+        <li class="text">３階選択５前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="63-">
+        <li class="text">３階階段前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="64--">
+        <li class="text">３階２-７前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="65-">
+        <li class="text">３階渡り廊下中</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="66-">
+        <li class="text">３階渡り廊下入り口</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="67-">
+        <li class="text">３↔︎２階段踊り場③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="68-">
+        <li class="text">２階階段前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="69-">
+        <li class="text">２階外階段前③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="70-">
+        <li class="text">２↔︎１階段踊り場③</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="71-r0010137">
+        <li class="text">R0010137</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="72-r0010138">
+        <li class="text">R0010138</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="73-r0010139">
+        <li class="text">R0010139</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="74-r0010140">
+        <li class="text">R0010140</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="75-r0010141">
+        <li class="text">R0010141</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="76-r0010142">
+        <li class="text">R0010142</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="77-r0010143">
+        <li class="text">R0010143</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="78-r0010144">
+        <li class="text">R0010144</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="79-r0010145">
+        <li class="text">R0010145</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="80-r0010146">
+        <li class="text">R0010146</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="81-r0010147">
+        <li class="text">R0010147</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="82-r0010148">
+        <li class="text">R0010148</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="83-r0010149">
+        <li class="text">R0010149</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="84-r0010150">
+        <li class="text">R0010150</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="85-r0010151">
+        <li class="text">R0010151</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="86-r0010153-2">
+        <li class="text">R0010153-2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="87-r0010153">
+        <li class="text">R0010153</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="88-r0010154-2">
+        <li class="text">R0010154-2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="89-r0010154">
+        <li class="text">R0010154</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="90-r0010155">
+        <li class="text">R0010155</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="91-r0010156">
+        <li class="text">R0010156</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="92-r0010157">
+        <li class="text">R0010157</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="93-r0010158">
+        <li class="text">R0010158</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="94-r0010159">
+        <li class="text">R0010159</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="95-">
+        <li class="text">トレーニングルーム</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="96-">
+        <li class="text">一年生の駐輪場</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="97-">
+        <li class="text">音楽室の下駄ボコ前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="98-">
+        <li class="text">看護塔１階２の２前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="99-">
+        <li class="text">看護塔１階の階段前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="100-">
+        <li class="text">看護塔２階と３階の踊り場女子トイレ前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="101-">
+        <li class="text">看護塔２階階段前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="102-">
+        <li class="text">看護塔２階図書室前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="103-">
+        <li class="text">看護塔３階階段前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="104-">
+        <li class="text">看護塔３階本館との渡り廊下みどり</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="105-">
+        <li class="text">看護塔３階廊下中間</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="106-">
+        <li class="text">看護塔と本館の渡り廊下（看護塔側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="107-">
+        <li class="text">看護塔の一階と２階の踊り場　男子トイレ前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="108-">
+        <li class="text">弓道場前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="109-">
+        <li class="text">県高が見える駐車場（食堂側）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="110-">
+        <li class="text">県高が見える駐車場（食堂側）　（）</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="111-">
+        <li class="text">校舎下駄箱前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="112-t">
+        <li class="text">小体育館行きt時路</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="113-">
+        <li class="text">小体育室</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="114-">
+        <li class="text">正門外側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="115-">
+        <li class="text">正門内側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="116-">
+        <li class="text">記念碑前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="117-">
+        <li class="text">校舎前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="118-">
+        <li class="text">事務室前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="119-">
+        <li class="text">校舎掲示板前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="120-">
+        <li class="text">体育館した正面</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="121-">
+        <li class="text">体育館と本館と看護科の分岐点</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="122-">
+        <li class="text">体育館右手前入り口</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="123-">
+        <li class="text">体育館右手前入り口外側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="124-">
+        <li class="text">体育館右前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="125-">
+        <li class="text">体育館左前</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="126-">
+        <li class="text">体育館左入り口</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="127-">
+        <li class="text">体育館中央</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="128-">
+        <li class="text">体育館用具入れ</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="129-">
+        <li class="text">本館と１体と繋ぐ渡り廊下左側</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="130-">
+        <li class="text">理家塔３階茶華道部前の階段</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="131-">
+        <li class="text">理家塔４階、下駄箱から入ったところ</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="132-">
+        <li class="text">理科塔の１階の入る前のドアと階段前</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
